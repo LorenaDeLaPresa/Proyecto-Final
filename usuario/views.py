@@ -23,7 +23,7 @@ class RegistroUsuario(CreateView):
 	# Si se usa el UserCreationForm en vez de RegistroForm solo se puede indicar los datos de nombre de usuario y contraseña. No se puede indicar Nombre, Apellidos y Correo.
     # form_class = UserCreationForm
 	form_class = RegistroForm
-	success_url = reverse_lazy('mascota_listar')
+	success_url = reverse_lazy('animal_listar')
 
 class UserAPI(APIView):
 	serializer = UserSerializer
