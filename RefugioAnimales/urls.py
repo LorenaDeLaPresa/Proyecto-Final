@@ -19,11 +19,13 @@ from django.urls import path
 from django.views import View
 from blog.views import index 
 from animal.views import AnimalCreate, AnimalList, animal_list
-
+from usuario.views import RegistroUsuario
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('nuevo/', AnimalCreate.as_view(), name='animal_crear'),
     path('listar/', animal_list, name='animal_listar'),
     path('blog', index),    
     path('listar2', AnimalList.as_view(), name='animal_listar2'),
+    path('registrar/', RegistroUsuario.as_view(), name='usuario_registrar'),
+    #path('api-auth/', include('rest_framework.urls'))
 ]

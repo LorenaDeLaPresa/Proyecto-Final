@@ -10,8 +10,8 @@ from django.contrib.auth.models import User
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 
-from apps.usuario.forms import RegistroForm
-from apps.usuario.serializers import UserSerializer
+from usuario.forms import RegistroForm
+from usuario.serializers import UserSerializer
 
 def listadousuarios(request):
 	lista = serializers.serialize('json', User.objects.all(), fields=['username', 'first_name'])
